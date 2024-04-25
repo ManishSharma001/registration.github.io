@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="#98AFC7" >
+      
+   <center> 
+    <form onsubmit="sendEmail(); reset(); return false;">
+    <h1>REGISTRATION FORM</h1> 
+  <big>
+    <b>
+        USERNAME:
+    </b>
+  </big>
+  <br>
+    <input type="username" placeholder="Enter a username">
+    <br>
+    <br>
+    <BIG>
+        <b>
+            PASSWORD:
+        </b>
+    </BIG>
+    <br>
+    <input type="password" placeholder="Enter a password">
+    <br>
+    <br>
+    <big>
+        <b>
+            Email id.
+        </b>
+    </big>
+    <br>
+    <input type="email" placeholder="Enter a Email id.">
+    <br>
+    <br>
+    <big>
+        <b>
+            NAME:
+        </b>
+    </big>
+    <br>
+    <input type="text" placeholder="Enter a name ">
+    <big>
+     <br>
+     <br>
+        <b>
+            ROLL NUMBER:
+        </b>
+    </big>
+    <br>
+    <input type="roll no." placeholder="Enter a roll no.">
+    <br>
+    <BR>
+    <big>
+        <b>
+            COURSE:
+        </b>
+    </big>
+    <select name="Course">
+        <option value="BCA">BCA</option>
+        <option value="BTECH">BTECH</option>
+        <option value="MCA">MCA</option>
+        <option value="LLB">LLB</option>
+        <option value="DIPLOMA">DIPLOMA</option>
+        </select>
+        <br>
+        <br>
+     <big>
+        <b>
+            YEARS:
+        </b>
+     </big>   
+     <select name="YEARS">
+        <option value="1ST">1ST</option>
+        <option value="2ND">2ND</option>
+        <option value="3RD">3RD</option>
+        <option value="4TH">4TH</option>
+        </select>
+        <br>
+        <br>
+     <big>
+        <b>
+            Date of birth:
+        </b>
+     </big>
+     <input type="date">
+     <br>
+     <br>
+     <big>
+        <b>
+            GENDER:
+        </b>
+     </big>
+     <label for = "100">
+     <input type="radio" value="Male" name="GENDER" id="100">Male
+    </label>
+    <label for = "101">
+     <input type="radio" value="FeMale" name="GENDER" id="101">Female
+    </label>
+    <br>
+    <br>
+    <big>
+        <b>
+            PHONE NO. :
+        </b>
+    </big>
+    <select name="code">
+        <option value="+91">+91</option>
+        <option value="+92">+92</option>
+        <option value="+22">+22</option>
+        <option value="+11">+11</option>
+        <option value="+00">+00</option>
+        </select>
+        <input type="phone" placeholder="987****">
+    <br>
+    <br>
+    <big>
+        <b>
+            CHOOSE A SUBJECT:
+        </b>
+    </big>
+    <br>
+    <label for = "102">
+    <input type="checkbox" value="AIML" name="subject" id="102">AIML
+    </label>
+    <br>
+    <label for = "103">
+        <input type="checkbox" value="AI" name="subject" id="103">AI
+    </label>
+    <br>
+    <label for = "104">
+        <input type="checkbox" value="ETHICAL HACKING" name="subject" id="104">ETHICAL HACKING
+    </label>
+    <br>
+    <br>
+    <big>
+        <b>
+            FEEDBACK:
+        </b>
+    </big>
+    <br>
+    <textarea name="feedback" placeholder="please give me your important feedback" rows="20"></textarea>
+    <br>
+
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</form>
+</center>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "bhardwaj202136@gmail.com",
+    Password : "781D657F1CB12CC030A3A5AD48E6C7501DFE",
+    To : 'bhardwaj202136@gmail.com',
+    From : document.getElementsById("email").value,
+    Subject : "new registration form",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+</script>
+</body>
+</html>
